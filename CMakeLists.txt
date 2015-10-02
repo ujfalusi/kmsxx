@@ -25,6 +25,7 @@ enable_testing()
 add_subdirectory(libkms++)
 add_subdirectory(libkmstest)
 add_subdirectory(tests)
+add_subdirectory(kmscube)
 
 if(LIBKMS_ENABLE_PYTHON)
         add_subdirectory(py)
