@@ -16,9 +16,12 @@ public:
 
 	PixelFormat format() const { return m_format; }
 
+	unsigned num_planes() const { return m_num_planes; }
+
 	uint8_t* map(unsigned plane) const { return m_planes[plane].map; }
 	uint32_t stride(unsigned plane) const { return m_planes[plane].stride; }
 	uint32_t size(unsigned plane) const { return m_planes[plane].size; }
+	uint32_t handle(unsigned plane) const { return m_planes[plane].handle; }
 
 	void clear();
 
