@@ -9,3 +9,9 @@ target_link_libraries(testpat kms++ kmstest ${LIBDRM_LIBRARIES})
 
 add_executable (kmsview kmsview.cpp)
 target_link_libraries(kmsview kms++ kmstest ${LIBDRM_LIBRARIES})
+
+add_executable (producer producer.cpp prodcons.h)
+target_link_libraries(producer kms++ kmstest ${LIBDRM_LIBRARIES})
+
+add_executable (consumer consumer.cpp prodcons.h)
+target_link_libraries(consumer kms++ kmstest ${LIBDRM_LIBRARIES})
